@@ -1,0 +1,269 @@
+linux_commands.txt
+   84  ls
+   85  ls /Desktop
+   86  cd Desktop
+   87  cd ..
+   88  cd Desktop
+   89  pwd
+   90  mkdir test
+   91  rmdir test
+   92  touch file1.txt
+   93  gzip file1.txt
+   94  rm file1
+   95  rm file1.txt.gz
+   96  cd ..
+   97  cd Desktop
+   98  touch file1
+   99  rm file1
+  100  touch file1.txt
+  101  vim file1.txt
+  102  sort file1.txt
+  103  sort -r file1.txt
+  104  vim file1.txt
+  105  sort -r file1.txt
+  106  man sort
+  107  uniq file1.txt
+  108  vim file1.txt
+  109  uniq -u file1.txt
+  110  sort file1.txt | uniq -u
+  111  sort file1.txt | uniq -d
+  112  sort file1.txt | uniq -c | sort -nr
+  113  vim file2.txt
+  114  diff file1.txt file2.txt
+  115  echo "hello"
+  116  echo "hello" file3.txt
+  117  echo "The path variable is $PATH"
+  118  echo *
+  119  echo f*
+  120  echo a*
+  121  echo `
+
+
+echo $(ls -al)
+`
+  122  echo {1..10}
+  123  chown x file1.txt
+  124  chown rps  file1.txt
+  125  ls -al
+  126  chmod a+r file1.txt
+  127  ls -al
+  128  umask
+  129  umask -s
+  130  umask -S
+  131  du
+  132  du *
+  133  du -h
+  134  du -h Desktop | sort -nr
+  135  cd..
+  136  cd ..
+  137  du -h Desktop | sort -nr
+  138  cd Desktop
+  139  df
+  140  df -h
+  141  df dev
+  142  basename file1.txt
+  143  dirname file1.txt
+  144  cd ..
+  145  dirname Desktop/file1.txt
+  146  cd Desktop
+  147  ps
+  148  ps ax
+  149  type ls
+  150  type cat
+  151  type pwd
+  152  type top
+  153  which ls
+  154  which docker
+  155  who
+  156  who am i
+  157  ping google.com
+  158  traceroute google.com
+  159  clear
+  160  history
+rps@rps-virtual-machine:~/Desktop$ crontab -l
+no crontab for rps
+rps@rps-virtual-machine:~/Desktop$ uname
+Linux
+rps@rps-virtual-machine:~/Desktop$ uname -mp
+x86_64 x86_64
+rps@rps-virtual-machine:~/Desktop$ uname -srv
+Linux 6.5.0-35-generic #35~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Tue May  7 09:00:52 UTC 2
+rps@rps-virtual-machine:~/Desktop$ uname -n
+rps-virtual-machine
+rps@rps-virtual-machine:~/Desktop$ uname -a
+Linux rps-virtual-machine 6.5.0-35-generic #35~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Tue May  7 09:00:52 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
+rps@rps-virtual-machine:~/Desktop$ printenv PATH
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
+rps@rps-virtual-machine:~/Desktop$ history
+    1  sudo apt update
+    2  sudo nano /etc/resolv.conf 
+    3  sudo apt update
+    4  sudo apt upgrade
+    5  sudo apt install gcc++
+    6  sudo apt install gcc
+    7  sudo apt install build-essentials
+    8  sudo apt install build-essential
+    9  sudo apt install gdb
+   10  init 0
+   11  gcc --version
+   12  cd "/home/rps/Desktop/C Demo/" && gcc first.c -o first && "/home/rps/Desktop/C Demo/"first
+   13  sudo su
+   14  tar xvfz node_exporter-1.7.0.linux-amd64.tar.gz 
+   15  cd node_exporter-1.7.0.linux-amd64/
+   16  sudo mv node_exporter /usr/local/bin/
+   17  sudo tee /etc/systemd/system/node_exporter.service<<EOF
+   18  [Unit]
+   19  Description=Node Exporter
+   20  After=network.target
+   21   
+   22  [Service]
+   23  User=rps
+   24  Group=rps
+   25  Type=simple
+   26  ExecStart=/usr/local/bin/node_exporter
+   27   
+   28  [Install]
+   29  WantedBy=multi-user.target
+   30  EOF
+   31  sudo systemctl daemon-reload
+   32  sudo systemctl start node_exporter
+   33  sudo systemctl enable node_exporter
+   34  sudo systemctl status node_exporter
+   35  sudo apt install gcc
+   36  sudo apt install git
+   37  sudo apt install make
+   38  sudo apt install vim
+   39  sudo apt install g++
+   40  sudo apt install gedit
+   41  sudo apt install cmake
+   42  sudo apt install g++
+   43  cd
+   44  sudo apt update -y
+   45  sudo apt install mysql-server
+   46  sudo systemctl status mysql.service 
+   47  sudo mysql
+   48  sudo mysql_secure_installation
+   49  sudo mysql
+   50  sudo mysql_secure_installation
+   51  sudo mysql -u root -p
+   52  sudo snap install mysql-workbench-community
+   53  cd
+   54  java -version
+   55  java --version
+   56  java --V
+   57  java -vesion
+   58  cd
+   59  sudo apt install gnome-shell-extension-manager -y
+   60  sudo chmod o-x /sbin/shutdown
+   61  sudo chmod o-x /sbin/reboot
+   62  init 0
+   63  init 6
+   64  java -version
+   65  sudo apt update
+   66  java -version
+   67  sudo apt install default-jre
+   68  java -version
+   69  sudo apt install default-jdk
+   70  javac -version
+   71  sudo snap install --classic eclipse
+   72  sudo apt update
+   73  sudo apt install default-jre
+   74  eclipse
+   75  sudo snap install intellij-idea-community --classic
+   76  sudo init 0
+   77  sudo bash install.sh
+   78  sudo apt --fix-broken install
+   79  sudo bash install.sh
+   80  cd
+   81  sudo apt install git -y
+   82  sudo init 0
+   83  sudo service oracle-xe start
+   84  ls
+   85  ls /Desktop
+   86  cd Desktop
+   87  cd ..
+   88  cd Desktop
+   89  pwd
+   90  mkdir test
+   91  rmdir test
+   92  touch file1.txt
+   93  gzip file1.txt
+   94  rm file1
+   95  rm file1.txt.gz
+   96  cd ..
+   97  cd Desktop
+   98  touch file1
+   99  rm file1
+  100  touch file1.txt
+  101  vim file1.txt
+  102  sort file1.txt
+  103  sort -r file1.txt
+  104  vim file1.txt
+  105  sort -r file1.txt
+  106  man sort
+  107  uniq file1.txt
+  108  vim file1.txt
+  109  uniq -u file1.txt
+  110  sort file1.txt | uniq -u
+  111  sort file1.txt | uniq -d
+  112  sort file1.txt | uniq -c | sort -nr
+  113  vim file2.txt
+  114  diff file1.txt file2.txt
+  115  echo "hello"
+  116  echo "hello" file3.txt
+  117  echo "The path variable is $PATH"
+  118  echo *
+  119  echo f*
+  120  echo a*
+  121  echo `
+
+
+echo $(ls -al)
+`
+  122  echo {1..10}
+  123  chown x file1.txt
+  124  chown rps  file1.txt
+  125  ls -al
+  126  chmod a+r file1.txt
+  127  ls -al
+  128  umask
+  129  umask -s
+  130  umask -S
+  131  du
+  132  du *
+  133  du -h
+  134  du -h Desktop | sort -nr
+  135  cd..
+  136  cd ..
+  137  du -h Desktop | sort -nr
+  138  cd Desktop
+  139  df
+  140  df -h
+  141  df dev
+  142  basename file1.txt
+  143  dirname file1.txt
+  144  cd ..
+  145  dirname Desktop/file1.txt
+  146  cd Desktop
+  147  ps
+  148  ps ax
+  149  type ls
+  150  type cat
+  151  type pwd
+  152  type top
+  153  which ls
+  154  which docker
+  155  who
+  156  who am i
+  157  ping google.com
+  158  traceroute google.com
+  159  clear
+  160  history
+  161  crontab -l
+  162  uname
+  163  uname -mp
+  164  uname -srv
+  165  uname -n
+  166  uname -a
+  167  printenv PATH
+  168  history
